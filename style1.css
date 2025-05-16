@@ -1,0 +1,93 @@
+/* General reset and font */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fef6e4; /* Light pastel beige */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Chatbox container */
+  #chatbox {
+    width: 90%;
+    max-width: 600px;
+    height: 70vh;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Message bubbles */
+  #chatbox p {
+    padding: 12px 16px;
+    margin: 10px 0;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  /* User message */
+  #chatbox p strong:contains("You:") {
+    display: none;
+  }
+  #chatbox p:nth-child(odd) {
+    background-color: #c8e7e1; /* pastel mint */
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  
+  /* Bot message */
+  #chatbox p:nth-child(even) {
+    background-color: #f3d5f5; /* pastel purple-pink */
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  
+  /* Input & Button */
+  input#user-input {
+    width: 70%;
+    max-width: 400px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    background-color: #ffffff;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: #a3c4f3; /* pastel blue */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #8ab4f8;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    #chatbox {
+      height: 60vh;
+    }
+  
+    input#user-input {
+      width: 60%;
+    }
+  
+    button {
+      padding: 10px 16px;
+    }
+  }
+  
